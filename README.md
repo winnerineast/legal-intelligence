@@ -10,7 +10,14 @@ This is a AI assistant NOT for attorneys, paralegals but laypersons like you and
 6. coming soon...
 
 ## Design Principle
-1. to leverage some craw platform to harvest internet information.
-2. to vectorize the data.
-3. to have a q & a UI with LLM to drill insights.
-4. to have a API engine to act back to internet based on insight derived from above.
+1. to leverage some craw platform to harvest internet. [craw_management](https://github.com/winnerineast/crawlab)
+2. to vectorize the data by pure coding.[vector](https://github.com/winnerineast/rag-from-scratch)
+3. to have a Q & A UI with LLM to drill insights.[brain](https://github.com/winnerineast/quivr)
+4. to act back to internet based on insight derived from above.[agents](https://github.com/winnerineast/crewAI)
+
+## Work Daily
+### 2024-05-04
+- prepared 4 codebase.
+- prepared gemma as my coding pilot.
+- next is to make all of 4 to run locally without any environment dependency.
+- next of next is to link them together to have a data pipeline.

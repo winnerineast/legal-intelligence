@@ -1,0 +1,12 @@
+[submodule "craw_management"]
+	path = craw_management
+	url = https://github.com/winnerineast/crawlab.git
+[submodule "vector"]
+	path = vector
+	url = https://github.com/winnerineast/rag-from-scratch.git
+[submodule "brain"]
+	path = brain
+	url = https://github.com/winnerineast/quivr.git
+[submodule "agents"]
+	path = agents
+	url = https://github.com/winnerineast/crewAI.git
