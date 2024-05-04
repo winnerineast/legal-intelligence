@@ -16,3 +16,6 @@
 [submodule "search_craw"]
 	path = search_craw
 	url = https://github.com/winnerineast/llm-answer-engine.git
+[submodule "spRAG"]
+	path = spRAG
+	url = https://github.com/winnerineast/spRAG.git

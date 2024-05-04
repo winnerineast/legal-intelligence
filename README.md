@@ -11,14 +11,18 @@ This is a AI assistant NOT for attorneys, paralegals but laypersons like you and
 
 ## Design Principle
 1. to leverage some craw platform to harvest internet. [craw_management](https://github.com/winnerineast/crawlab)
-2. to vectorize the data by pure coding.[vector](https://github.com/winnerineast/rag-from-scratch)
-3. to have a Q & A UI with LLM to drill insights.[brain](https://github.com/winnerineast/quivr)
-4. to act back to internet based on insight derived from above.[agents](https://github.com/winnerineast/crewAI)
+2. to leverage llm-answer-engine to have better craw. [search_craw](https://github.com/winnerineast/llm-answer-engine.git)
+3. to vectorize the data by pure coding.[vector](https://github.com/winnerineast/rag-from-scratch)
+4. to enhance RAG structure with spRAG. [spRAG](https://github.com/winnerineast/spRAG.git)
+5. to have a Q & A UI with LLM to drill insights.[brain](https://github.com/winnerineast/quivr)
+5. to have Reor to link various knowledge together. [brain2](https://github.com/winnerineast/reor.git)
+6. to act back to internet based on insight derived from above.[agents](https://github.com/winnerineast/crewAI)
 
 ## Work Daily
 ### 2024-05-05
 - added llm-answer-engine to have better craw. [search_craw](https://github.com/winnerineast/llm-answer-engine.git)
 - added second brain Reor to link various knowledge together. [brain2](https://github.com/winnerineast/reor.git)
+- added spRAG to enhance performance of RAG. [spRAG](https://github.com/winnerineast/spRAG.git)
 - ran through craw_management project folders and plan to make it slim.
 
 ### 2024-05-04
