@@ -10,3 +10,9 @@
 [submodule "agents"]
 	path = agents
 	url = https://github.com/winnerineast/crewAI.git
+[submodule "brain2"]
+	path = brain2
+	url = https://github.com/winnerineast/reor.git
+[submodule "search_craw"]
+	path = search_craw
+	url = https://github.com/winnerineast/llm-answer-engine.git

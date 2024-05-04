@@ -16,6 +16,10 @@ This is a AI assistant NOT for attorneys, paralegals but laypersons like you and
 4. to act back to internet based on insight derived from above.[agents](https://github.com/winnerineast/crewAI)
 
 ## Work Daily
+### 2024-05-05
+- added llm-answer-engine to have better craw. [search_craw](https://github.com/winnerineast/llm-answer-engine.git)
+- added second brain Reor to link various knowledge together. [brain2](https://github.com/winnerineast/reor.git)
+
 ### 2024-05-04
 - prepared 4 codebase.
 - prepared gemma as my coding pilot.
