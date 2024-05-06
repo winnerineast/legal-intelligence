@@ -19,3 +19,6 @@
 [submodule "spRAG"]
 	path = spRAG
 	url = https://github.com/winnerineast/spRAG.git
+[submodule "workflow"]
+	path = workflow
+	url = https://github.com/winnerineast/dify.git
