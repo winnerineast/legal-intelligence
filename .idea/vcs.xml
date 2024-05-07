@@ -4,7 +4,14 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/agents" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/brain" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/brain2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/craw_management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/craw_management/crawlab-docs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/craw_management/deployment_examples" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/craw_management/screenshots" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/search_craw" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/spRAG" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vector" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workflow" vcs="Git" />
   </component>
 </project>

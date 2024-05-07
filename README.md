@@ -19,6 +19,13 @@ This is a AI assistant NOT for attorneys, paralegals but laypersons like you and
 6. to act back to internet based on insight derived from above.[agents](https://github.com/winnerineast/crewAI)
 
 ## Work Daily
+### 2024-05-07
+- [craw_management](https://github.com/winnerineast/crawlab) - backend - start to consolidate source code and simplify the configuration for easy deployment.
+- created version1 folder to have a clear and clean code base.
+
+### 2024-05-06
+- added dify as workflow engine. [workflow](https://github.com/winnerineast/dify.git)
+
 ### 2024-05-05
 - added llm-answer-engine to have better craw. [search_craw](https://github.com/winnerineast/llm-answer-engine.git)
 - added second brain Reor to link various knowledge together. [brain2](https://github.com/winnerineast/reor.git)
