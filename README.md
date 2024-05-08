@@ -19,6 +19,11 @@ This is a AI assistant NOT for attorneys, paralegals but laypersons like you and
 6. to act back to internet based on insight derived from above.[agents](https://github.com/winnerineast/crewAI)
 
 ## Work Daily
+### 2024-05-08
+- successfully built both frontend (pnpm run build) and backend (go build) and db (docker compose up)
+- to run backend default is master mode (crawlab server) and frontend (pnpm serve)
+- next step is to create script to run worker mode and master mode at the same time and see if simplify the backend into one project.
+
 ### 2024-05-07
 - [craw_management](https://github.com/winnerineast/crawlab) - backend - start to consolidate source code and simplify the configuration for easy deployment.
 - created version1 folder to have a clear and clean code base.
