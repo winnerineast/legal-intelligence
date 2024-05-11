@@ -21,6 +21,7 @@ This is an AI assistant NOT for attorneys, paralegals but laypersons like you an
 ## Work Daily
 ### 2024-05-11
 - continue to read and understand the go project of craw_management in order to consolidate backend.
+- added [markdowner](https://github.com/winnerineast/markdowner.git) which is a tool to convert website into LLM-ready markdown data.
 
 ### 2024-05-08
 - successfully built both frontend (pnpm run build) and backend (go build) and db (docker compose up)

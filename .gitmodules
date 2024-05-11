@@ -22,3 +22,6 @@
 [submodule "workflow"]
 	path = workflow
 	url = https://github.com/winnerineast/dify.git
+[submodule "markdowner"]
+	path = markdowner
+	url = https://github.com/winnerineast/markdowner.git

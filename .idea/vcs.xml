@@ -17,6 +17,7 @@
     <mapping directory="$PROJECT_DIR$/craw_management/public-plugins" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/craw_management/screenshots" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/craw_management/template-parser" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/markdowner" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/search_craw" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/spRAG" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vector" vcs="Git" />
