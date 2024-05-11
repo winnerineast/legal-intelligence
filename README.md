@@ -1,8 +1,8 @@
 # Legal Intelligence
-This is a AI assistant NOT for attorneys, paralegals but laypersons like you and me.
+This is an AI assistant NOT for attorneys, paralegals but laypersons like you and me.
 
 ## How to run
-1. A computer running Windows or MacOS.
+1. A computer running MacOS (no Linux or Windows for time being).
 2. An administrator account of your computer.
 3. A python3 environment.
 4. install ollama and refer to [intallation guide](https://github.com/ollama/ollama)
@@ -19,6 +19,9 @@ This is a AI assistant NOT for attorneys, paralegals but laypersons like you and
 6. to act back to internet based on insight derived from above.[agents](https://github.com/winnerineast/crewAI)
 
 ## Work Daily
+### 2024-05-11
+- continue to read and understand the go project of craw_management in order to consolidate backend.
+
 ### 2024-05-08
 - successfully built both frontend (pnpm run build) and backend (go build) and db (docker compose up)
 - to run backend default is master mode (crawlab server) and frontend (pnpm serve)
