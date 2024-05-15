@@ -7,6 +7,7 @@
     <mapping directory="$PROJECT_DIR$/brain2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/craw_management" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/craw_management/crawlab-core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/craw_management/crawlab-db" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/craw_management/crawlab-docs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/craw_management/crawlab-fs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/craw_management/crawlab-grpc" vcs="Git" />

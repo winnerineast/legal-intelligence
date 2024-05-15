@@ -25,3 +25,6 @@
 [submodule "markdowner"]
 	path = markdowner
 	url = https://github.com/winnerineast/markdowner.git
+[submodule "MaxKB"]
+	path = MaxKB
+	url = https://github.com/winnerineast/MaxKB.git

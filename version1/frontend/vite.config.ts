@@ -1,68 +1,40 @@
-import {resolve} from 'path';
-import {defineConfig, splitVendorChunkPlugin} from 'vite';
-import vue from '@vitejs/plugin-vue';
-import dynamicImport from 'vite-plugin-dynamic-import';
-import {visualizer} from 'rollup-plugin-visualizer';
-import externalGlobals from 'rollup-plugin-external-globals';
-import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import { fileURLToPath, URL } from 'node:url'
+import type { ProxyOptions } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 
-export default defineConfig({
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            if (id.includes('@fortawesome')) return '@fortawesome';
-            if (id.includes('element-plus')) return 'element-plus';
-            if (id.includes('zrender')) return 'zrender';
-            if (id.includes('echarts')) return 'echarts';
-            if (id.includes('codemirror')) return 'codemirror';
-            if (id.includes('atom-material-icons')) return 'atom-material-icons';
-            if (id.includes('crawlab-ui')) return 'crawlab-ui';;
-            return 'vendor.[hash]';
-          }
-        }
-      },
-      external: [
-        // 'codemirror',
-        // 'echarts',
-      ],
-      plugins: [
-        // @ts-ignore
-        // externalGlobals({
-        //   // codemirror: 'CodeMirror',
-        //   echarts: 'echarts',
-        // })
-      ],
+import vue from '@vitejs/plugin-vue'
+import DefineOptions from 'unplugin-vue-define-options/vite'
+
+const envDir = './env'
+// https://vitejs.dev/config/
+export default defineConfig(({ mode }) => {
+  const ENV = loadEnv(mode, envDir)
+  const proxyConf: Record<string, string | ProxyOptions> = {}
+  proxyConf['/api'] = {
+    target: 'http://127.0.0.1:8080',
+    changeOrigin: true,
+    rewrite: (path) => path.replace(ENV.VITE_BASE_PATH, '/')
+  }
+  return {
+    preflight: false,
+    lintOnSave: false,
+    base: ENV.VITE_BASE_PATH,
+    envDir: envDir,
+    plugins: [vue(), DefineOptions()],
+    server: {
+      cors: true,
+      host: '0.0.0.0',
+      port: Number(ENV.VITE_APP_PORT),
+      strictPort: true,
+      proxy: proxyConf
+    },
+    build: {
+      outDir: 'dist/ui'
+    },
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url))
+      }
     }
-  },
-  resolve: {
-    dedupe: ['vue', 'element-plus', 'codemirror'],
-    alias: [
-      {find: '@', replacement: resolve(__dirname, 'src')},
-    ],
-    extensions: [
-      '.js',
-      '.ts',
-      '.jsx',
-      '.tsx',
-      '.json',
-      '.vue',
-      '.scss',
-    ]
-  },
-  plugins: [
-    vue(),
-    dynamicImport(),
-    // splitVendorChunkPlugin(),
-    // externalizeDeps(),
-    // @ts-ignore
-    visualizer({
-      open: true,
-      // open: false,
-    }),
-  ],
-  server: {
-    cors: true,
-  },
-});
+  }
+})
