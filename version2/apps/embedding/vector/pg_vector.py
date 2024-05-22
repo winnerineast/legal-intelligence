@@ -42,7 +42,6 @@ class PGVector(BaseVectorStore):
         return embedding.embed_query(text)
 
     def vector_is_create(self) -> bool:
-        # 项目启动默认是创建好的 不需要再创建
         return True
 
     def vector_create(self):

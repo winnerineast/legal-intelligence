@@ -74,13 +74,13 @@ class DoesNotExist(Exception):
 
 class Config(dict):
     defaults = {
-        # 数据库相关配置
+        # Database Configuration
         "DB_HOST": "",
         "DB_PORT": "",
         "DB_USER": "",
         "DB_PASSWORD": "",
         "DB_ENGINE": "django.db.backends.postgresql_psycopg2",
-        # 邮件相关配置
+        # Notification Email Configuration
         "EMAIL_ADDRESS": "",
         "EMAIL_USE_TLS": False,
         "EMAIL_USE_SSL": True,
@@ -88,11 +88,11 @@ class Config(dict):
         "EMAIL_PORT": 465,
         "EMAIL_HOST_USER": "",
         "EMAIL_HOST_PASSWORD": "",
-        # 向量模型
+        # Vector Embedding Model
         "EMBEDDING_MODEL_NAME": "shibing624/text2vec-base-chinese",
         "EMBEDDING_DEVICE": "cpu",
         "EMBEDDING_MODEL_PATH": os.path.join(PROJECT_DIR, 'models'),
-        # 向量库配置
+        # Vector Database
         "VECTOR_STORE_NAME": 'pg_vector'
 
     }
@@ -138,7 +138,6 @@ class ConfigManager:
     def from_mapping(self, *mapping, **kwargs):
         """Updates the config like :meth:`update` ignoring items with non-upper
         keys.
-
         .. versionadded:: 0.11
         """
         mappings = []
@@ -194,11 +193,8 @@ class ConfigManager:
             config = manager.config
         else:
             msg = f"""
-
             Error: No config file found.
-
             You can run `cp config_example.yml {root_path}/config.yml`, and edit it.
-
             """
             raise ImportError(msg)
         return config

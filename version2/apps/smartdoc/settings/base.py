@@ -36,8 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    "drf_yasg",  # swagger 接口
-    'django_filters',  # 条件过滤
+    "drf_yasg",  # swagger Interface
+    'django_filters',  # Condition Filter
     'django_apscheduler'
 
 ]
@@ -53,7 +53,7 @@ MIDDLEWARE = [
 ]
 
 JWT_AUTH = {
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=60 * 60 * 2)  # <-- 设置token有效时间
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=60 * 60 * 2)  # <-- Token timeout
 }
 
 ROOT_URLCONF = 'smartdoc.urls'
@@ -87,7 +87,7 @@ SWAGGER_SETTINGS = {
     }
 }
 
-#  缓存配置
+#  Cache Configuration
 CACHES = {
     "default": {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
@@ -95,15 +95,13 @@ CACHES = {
     'model_cache': {
         'BACKEND': 'common.cache.mem_cache.MemCache'
     },
-    # 存储用户信息
     'user_cache': {
         'BACKEND': 'common.cache.file_cache.FileCache',
-        'LOCATION': os.path.join(PROJECT_DIR, 'data', 'cache', "user_cache")  # 文件夹路径
+        'LOCATION': os.path.join(PROJECT_DIR, 'data', 'cache', "user_cache")
     },
-    # 存储用户Token
     "token_cache": {
         'BACKEND': 'common.cache.file_cache.FileCache',
-        'LOCATION': os.path.join(PROJECT_DIR, 'data', 'cache', "token_cache")  # 文件夹路径
+        'LOCATION': os.path.join(PROJECT_DIR, 'data', 'cache', "token_cache")
     },
     "chat_cache": {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
@@ -121,15 +119,15 @@ STATIC_ROOT = os.path.join(BASE_DIR.parent, 'static')
 
 WSGI_APPLICATION = 'smartdoc.wsgi.application'
 
-# 邮件配置
+# Notification Email Configuration
 EMAIL_ADDRESS = CONFIG.get('EMAIL_ADDRESS')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = CONFIG.get('EMAIL_USE_TLS')  # 是否使用TLS安全传输协议(用于在两个通信应用程序之间提供保密性和数据完整性。)
-EMAIL_USE_SSL = CONFIG.get('EMAIL_USE_SSL')  # 是否使用SSL加密，qq企业邮箱要求使用
-EMAIL_HOST = CONFIG.get('EMAIL_HOST')  # 发送邮件的邮箱 的 SMTP服务器，这里用了163邮箱
-EMAIL_PORT = CONFIG.get('EMAIL_PORT')  # 发件箱的SMTP服务器端口
-EMAIL_HOST_USER = CONFIG.get('EMAIL_HOST_USER')  # 发送邮件的邮箱地址
-EMAIL_HOST_PASSWORD = CONFIG.get('EMAIL_HOST_PASSWORD')  # 发送邮件的邮箱密码(这里使用的是授权码)
+EMAIL_USE_TLS = CONFIG.get('EMAIL_USE_TLS')  # Enable/Disable TLS
+EMAIL_USE_SSL = CONFIG.get('EMAIL_USE_SSL')  # Enable/Disable SSL
+EMAIL_HOST = CONFIG.get('EMAIL_HOST')  # SMTP Server Address
+EMAIL_PORT = CONFIG.get('EMAIL_PORT')  # SMTP Server Port
+EMAIL_HOST_USER = CONFIG.get('EMAIL_HOST_USER')  # notification email address
+EMAIL_HOST_PASSWORD = CONFIG.get('EMAIL_HOST_PASSWORD')  # SMTP Server password
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases

@@ -33,7 +33,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title="Python API",
         default_version='v1',
-        description="智能客服平台",
+        description="Legal Intelligence",
     ),
     public=True,
     permission_classes=[permissions.AllowAny],
@@ -69,11 +69,11 @@ def page_not_found(request, exception):
     页面不存在处理
     """
     if request.path.startswith("/api/"):
-        return Result(response_status=status.HTTP_404_NOT_FOUND, code=404, message="找不到接口")
+        return Result(response_status=status.HTTP_404_NOT_FOUND, code=404, message="Can't find the interface.")
     else:
         index_path = os.path.join(PROJECT_DIR, 'apps', "static", 'ui', 'index.html')
         if not os.path.exists(index_path):
-            return HttpResponse("页面不存在", status=404)
+            return HttpResponse("Page Not Found", status=404)
         file = open(index_path, "r", encoding='utf-8')
         content = file.read()
         file.close()

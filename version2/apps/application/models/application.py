@@ -45,16 +45,16 @@ class Application(AppModelMixin):
 
     @staticmethod
     def get_default_model_prompt():
-        return ('已知信息：'
+        return ('Context is：'
                 '\n{data}'
-                '\n回答要求：'
-                '\n- 如果你不知道答案或者没有从获取答案，请回答“没有在知识库中查找到相关信息，建议咨询相关技术支持或参考官方文档进行操作”。'
-                '\n- 避免提及你是从<data></data>中获得的知识。'
-                '\n- 请保持答案与<data></data>中描述的一致。'
-                '\n- 请使用markdown 语法优化答案的格式。'
-                '\n- <data></data>中的图片链接、链接地址和脚本语言请完整返回。'
-                '\n- 请使用与问题相同的语言来回答。'
-                '\n问题：'
+                '\nThe requirement of your answer：'
+                '\n- If you have no answer，please answer “No information is found in the context”.'
+                '\n- Avoid to use <data></data>.'
+                '\n- Align your answer with the information of <data></data>.'
+                '\n- Format your answer with Markdown grammar.'
+                '\n- Directly return the information if there are picture link, hyperlink or script in <data></data>.'
+                '\n- Please answer in English and do not use any other language.'
+                '\n Now the question is：'
                 '\n{question}')
 
     class Meta:
@@ -73,8 +73,8 @@ class ApplicationDatasetMapping(AppModelMixin):
 class Chat(AppModelMixin):
     id = models.UUIDField(primary_key=True, max_length=128, default=uuid.uuid1, editable=False, verbose_name="主键id")
     application = models.ForeignKey(Application, on_delete=models.CASCADE)
-    abstract = models.CharField(max_length=1024, verbose_name="摘要")
-    client_id = models.UUIDField(verbose_name="客户端id", default=None, null=True)
+    abstract = models.CharField(max_length=1024, verbose_name="Summary")
+    client_id = models.UUIDField(verbose_name="Client id", default=None, null=True)
 
     class Meta:
         db_table = "application_chat"
@@ -82,9 +82,9 @@ class Chat(AppModelMixin):
 
 class VoteChoices(models.TextChoices):
     """订单类型"""
-    UN_VOTE = -1, '未投票'
-    STAR = 0, '赞同'
-    TRAMPLE = 1, '反对'
+    UN_VOTE = -1, 'NA'
+    STAR = 0, 'Agree'
+    TRAMPLE = 1, 'Object'
 
 
 class ChatRecord(AppModelMixin):
@@ -93,18 +93,18 @@ class ChatRecord(AppModelMixin):
     """
     id = models.UUIDField(primary_key=True, max_length=128, default=uuid.uuid1, editable=False, verbose_name="主键id")
     chat = models.ForeignKey(Chat, on_delete=models.CASCADE)
-    vote_status = models.CharField(verbose_name='投票', max_length=10, choices=VoteChoices.choices,
+    vote_status = models.CharField(verbose_name='Vote', max_length=10, choices=VoteChoices.choices,
                                    default=VoteChoices.UN_VOTE)
-    problem_text = models.CharField(max_length=1024, verbose_name="问题")
-    answer_text = models.CharField(max_length=40960, verbose_name="答案")
-    message_tokens = models.IntegerField(verbose_name="请求token数量", default=0)
-    answer_tokens = models.IntegerField(verbose_name="响应token数量", default=0)
-    const = models.IntegerField(verbose_name="总费用", default=0)
-    details = models.JSONField(verbose_name="对话详情", default=dict)
+    problem_text = models.CharField(max_length=1024, verbose_name="Question")
+    answer_text = models.CharField(max_length=40960, verbose_name="Answer")
+    message_tokens = models.IntegerField(verbose_name="Nos of request tokens", default=0)
+    answer_tokens = models.IntegerField(verbose_name="Nos of response tokens", default=0)
+    const = models.IntegerField(verbose_name="Total Cost", default=0)
+    details = models.JSONField(verbose_name="Q&A Details", default=dict)
     improve_paragraph_id_list = ArrayField(verbose_name="改进标注列表",
                                            base_field=models.UUIDField(max_length=128, blank=True)
                                            , default=list)
-    run_time = models.FloatField(verbose_name="运行时长", default=0)
+    run_time = models.FloatField(verbose_name="Runtime", default=0)
     index = models.IntegerField(verbose_name="对话下标")
 
     def get_human_message(self):

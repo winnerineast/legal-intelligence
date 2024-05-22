@@ -22,25 +22,25 @@ from common.util.field_message import ErrMessage
 
 class IGenerateHumanMessageStep(IBaseChatPipelineStep):
     class InstanceSerializer(serializers.Serializer):
-        # 问题
-        problem_text = serializers.CharField(required=True, error_messages=ErrMessage.char("问题"))
-        # 段落列表
+        # Question
+        problem_text = serializers.CharField(required=True, error_messages=ErrMessage.char("Question"))
+        # Paragraph
         paragraph_list = serializers.ListField(child=InstanceField(model_type=ParagraphPipelineModel, required=True),
-                                               error_messages=ErrMessage.list("段落列表"))
-        # 历史对答
+                                               error_messages=ErrMessage.list("Paragraph List"))
+        # History
         history_chat_record = serializers.ListField(child=InstanceField(model_type=ChatRecord, required=True),
-                                                    error_messages=ErrMessage.list("历史对答"))
-        # 多轮对话数量
-        dialogue_number = serializers.IntegerField(required=True, error_messages=ErrMessage.integer("多轮对话数量"))
-        # 最大携带知识库段落长度
+                                                    error_messages=ErrMessage.list("History"))
+        # Multiple Q&A
+        dialogue_number = serializers.IntegerField(required=True, error_messages=ErrMessage.integer("Nos Multiple Q&A"))
+        # Max Length of Chunk
         max_paragraph_char_number = serializers.IntegerField(required=True, error_messages=ErrMessage.integer(
-            "最大携带知识库段落长度"))
-        # 模板
-        prompt = serializers.CharField(required=True, error_messages=ErrMessage.char("提示词"))
-        # 补齐问题
-        padding_problem_text = serializers.CharField(required=False, error_messages=ErrMessage.char("补齐问题"))
-        # 未查询到引用分段
-        no_references_setting = NoReferencesSetting(required=True, error_messages=ErrMessage.base("无引用分段设置"))
+            "Max Length of Chunk"))
+        # Prompts
+        prompt = serializers.CharField(required=True, error_messages=ErrMessage.char("Prompts"))
+        # Padding Question
+        padding_problem_text = serializers.CharField(required=False, error_messages=ErrMessage.char("Padding Question"))
+        # Chunk Not Found
+        no_references_setting = NoReferencesSetting(required=True, error_messages=ErrMessage.base("Chunk Not Found Configuration"))
 
     def get_step_serializer(self, manage: PipelineManage) -> Type[serializers.Serializer]:
         return self.InstanceSerializer
