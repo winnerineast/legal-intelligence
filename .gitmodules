@@ -28,3 +28,9 @@
 [submodule "MaxKB"]
 	path = MaxKB
 	url = https://github.com/winnerineast/MaxKB.git
+[submodule "lazygpt"]
+	path = lazygpt
+	url = https://github.com/winnerineast/lazygpt.git
+[submodule "cube-studio"]
+	path = cube-studio
+	url = https://github.com/winnerineast/cube-studio.git
