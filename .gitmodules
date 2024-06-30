@@ -34,3 +34,9 @@
 [submodule "cube-studio"]
 	path = cube-studio
 	url = https://github.com/winnerineast/cube-studio.git
+[submodule "gptpdf"]
+	path = gptpdf
+	url = https://github.com/winnerineast/gptpdf.git
+[submodule "AI-samples"]
+	path = AI-samples
+	url = https://github.com/winnerineast/AI-samples
