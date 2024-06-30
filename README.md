@@ -19,9 +19,14 @@ This is an AI assistant NOT for attorneys, paralegals but laypersons like you an
 6. to act back to internet based on insight derived from above.[agents](https://github.com/winnerineast/crewAI)
 
 ## Work Daily
+### 2024-06-30
+- added gptpdf that could process pdf files.
+- added real-time voice AI agent (No.18 of AI-sampples)
+- created version 3 based on MaxKB
+
 ### 2024-06-28
-- to add lazyGPT as workflow.
-- to add cube-studio as baseline model training platform.
+- added lazyGPT as workflow.
+- added cube-studio as baseline model training platform.
 
 ### 2024-05-20
 - completed version1.
