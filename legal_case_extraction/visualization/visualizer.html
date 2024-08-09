@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Visualization</title>
+    <style>
+        /* Add any custom CSS styles here */
+        
+        .link 
+        { 
+            fill: none; 
+            stroke: #ccc; 
+            stroke-width: 1.5px; 
+        }
+        .tooltip 
+        { 
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8); 
+            padding: 8px; 
+            border: 1px solid #ccc; 
+            pointer-events: none; /* This disables mouse events on the element */
+        }
+        #panel 
+        { 
+            border: 2.5px solid #ccc;
+        }
+
+    .progress {
+        position: relative;
+        width: 20px;
+        height: 600px; 
+        background-color: #f0f0f0; 
+        top: 0;
+        left: 10px; 
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .scrollbar {
+        position: absolute;
+        width: 100%;
+        background-color: #3498db; 
+        transition: height 0.3s ease-out; 
+        bottom: 0;
+        /* height: 50%; the progress, will be dynamically adjusted */
+    }
+
+    .lefttorightcontainer {
+        display: flex; 
+        flex-direction: row;
+    }
+     
+    </style>
+    <link rel="stylesheet" href="graph_style.css">
+</head>
+<body>
+    <div id="app">
+        <input type="file" @change="handleFileChange">
+        <div class="lefttorightcontainer">
+            <svg id="panel" width="960" height="600"></svg>
+            <div id="zoombar">
+                
+                <!-- <span v-text="'Zoom: ' + Math.round(100 * zoomScrollbarPosition) + ' %'"></span> -->
+                <div class="progress">
+                    <div class="scrollbar" :style="{ height: 100 * zoomScrollbarPosition + '%' }"></div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div v-if="tooltip.visible" class="tooltip" :style="{ top: tooltip.y + 'px', left: tooltip.x + 'px' }">
+            <div class="tooltip-header">
+                <h3>{{ tooltip.data.id }}</h3>
+                <p><b>Type: </b>{{ tooltip.data.node_type }}</p>
+                <p><b>Subtype: </b>{{ tooltip.data.data.type }}</p>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script> -->
+    <script src="vue_global.js"></script>
+    <script src="d3.v7.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

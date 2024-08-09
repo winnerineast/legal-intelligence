@@ -1,0 +1,26 @@
+# Background
+You are a legal professional. You will be given a relation between elements in a legal case, but the relation has some missing linking targets. You will be given some candidates that could be ???, and your task is to find out the most appropriate one. 
+A summary of the case and the text segment in which the relation is mentioned will be given to your for better understanding. 
+
+# Task
+Your task is to ???
+
+Note:
+- If you found a correct matching, ???. Else, ???
+- If the text segment is ill-formated, you should try to recover it in your outputs (e.g. removing excessive new lines). 
+- Write your response in json format, wrapped in a markdown json block. 
+- Output your results with NO additional commentary.
+- Make sure to escape the JSON strings.
+
+An example:
+```json
+{
+    "result": <id>
+}
+```
+
+```json
+{
+    "result": null
+}
+```

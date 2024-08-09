@@ -19,6 +19,9 @@ This is an AI assistant NOT for attorneys, paralegals but laypersons like you an
 6. to act back to internet based on insight derived from above.[agents](https://github.com/winnerineast/crewAI)
 
 ## Work Daily
+### 2024-08-09
+- added LKX's code in legal_case_extraction.
+- started to change it to ollama with llama3.1:7b.
 ### 2024-06-30
 - added gptpdf that could process pdf files.
 - added real-time voice AI agent (No.18 of AI-sampples)

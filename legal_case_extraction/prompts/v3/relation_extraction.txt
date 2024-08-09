@@ -1,0 +1,35 @@
+# Background
+As a legal professional, you should carefully read the text segment extracted from a legal case document. A summary of the case will be given to your for better understanding. You will be provided with some facts (F), laws (L) and court decisions (D) related to this paragraph.
+
+# Task
+A **relation** is the court's reasoning or rationale that explains why the court reached its decision, through interpretations of the law and application to the facts.
+You need to carefully comprehend and analyze the text segment to identify and extract all **relations** that connects facts, laws and court decisions, in the order as they appear in the text. 
+
+Note:
+- In an identified relation, if an element (fact, law or decision) is mentioned in the text but is not present in the given list, you should put the id as null. In this case, you should still summarize the relation as if it can be found in the list, and provide a short but informative description of the missing information in "description_of_missing_item" for subsequent searching.
+- If the text segment is ill-formated, you should try to recover it in your outputs (e.g. removing excessive new lines). 
+- Write your response in json format, wrapped in a markdown json block. 
+- Output your results with NO additional commentary.
+- Make sure to escape the JSON strings.
+
+An example:
+```json
+[
+    {
+        "relation_summary": <relation extracted from the text>,
+        "id1": "F6",
+        "id2": "L4",
+        "description_of_missing_item": null,
+        "confidence": 65
+    },
+    {
+        "relation_summary": <relation extracted from the text>,
+        "id1": "L7",
+        "id2": null,
+        "description_of_missing_item": <a summary of the missing item>,
+        "confidence": 30
+    },
+    ...
+]
+```
+

@@ -1,0 +1,98 @@
+{
+    "summary": "Here is a concise summary of the text:\n\n**Case Name:** Evans v. Linden Research, Inc.\n\n**Court:** United States District Court for the Eastern District of Pennsylvania\n\n**Date:** February 3, 2011\n\n**Case Summary:** Virtual world participants brought a contract and tort action against the virtual world operators, alleging that their virtual property was unlawfully confiscated. The operators sought dismissal and/or transfer of the matter to California under 28 U.S.C.S. \u00a7 1404(a). The court found that California's venue affidavit requirement is a procedural rule and not a substantive requirement. The mandatory forum selection clause in the operators' terms of service applied and was not unfair, unconscionable, or unreasonable under California law.\n\n**Key Points:**\n\n* California's venue affidavit requirement is a procedural rule under Erie doctrine.\n* Mandatory forum selection clause in the operators' terms of service applied and was not unfair, unconscionable, or unreasonable under California law.\n* Plaintiffs failed to file a \"venue affidavit\" concurrently with the Complaint, but this failure does not warrant dismissal.\n* The court granted dismissal in part and transferred the action to California.\n\n**Parties:**\n\n* Plaintiffs: Carl Evans, Donald Spencer, Valerie Spencer, Cindy Carter\n* Defendants: Linden Research, Inc., Philip Rosedale",
+    "laws": {
+        "L1": "28 U.S.C.S. \u00a7 1404(a)",
+        "L2": "Cal. Civ. Code \u00a7 1780(d)",
+        "L3": "Federal Rule of Civil Procedure (not specified)",
+        "L4": "California Consumer Legal Remedies Act (CLRA)",
+        "L5": "Cal. Civ. Code \u00a7 1780(d) (again, mentioned as a procedural rule)"
+    },
+    "facts": {
+        "F1": "Carl Evans, Donald Spencer, Valerie Spencer, and Cindy Carter (collectively \"Plaintiffs\") initiated a contract and tort action against Linden Research, Inc. (the \"Linden\") and Philip Rosedale (\"Rosedale\") (collectively \"Defendants\").",
+        "F2": "The action was brought on behalf of themselves and all others similarly situated.",
+        "F3": "The Plaintiffs alleged that their virtual property was unlawfully confiscated by the Defendants.",
+        "F4": "The Defendants sought dismissal and/or transfer of the matter to California under 28 U.S.C.S. \u00a7 1404(a).",
+        "F5": "The court found that California's venue affidavit requirement in Cal. Civ. Code \u00a7 1780(d) was a procedural rule.",
+        "F6": "The mandatory forum selection clause in the Defendants' terms of service applied and was not unfair, unconscionable, or unreasonable under California law.",
+        "F7": "The court granted dismissal in part and transferred the action.",
+        "F8": "The Plaintiffs failed to file a \"venue affidavit\" concurrently with the Complaint, as required by the California Consumer Legal Remedies Act (CLRA).",
+        "F9": "The court considered whether the state rule was substantive or procedural, and determined that it was procedural under the Erie doctrine.",
+        "F10": "The court analyzed whether the mandatory forum selection clause was enforceable, and found that it was not unfair or unreasonable under California law.",
+        "F11": "The court considered whether the terms of the contract were unconscionable, and found that they were not.",
+        "F12": "The court ultimately enforced the mandatory forum selection clause and transferred the action to California."
+    },
+    "relations": [
+        {
+            "fact": "F1",
+            "law": "L4",
+            "relation_summary": "Plaintiffs initiated a contract and tort action against Defendants",
+            "confidence": 80
+        },
+        {
+            "fact": "F2",
+            "law": "L4",
+            "relation_summary": "The action was brought on behalf of themselves and all others similarly situated",
+            "confidence": 80
+        },
+        {
+            "fact": "F3",
+            "law": "L4",
+            "relation_summary": "Plaintiffs alleged that their virtual property was unlawfully confiscated by the Defendants",
+            "confidence": 80
+        },
+        {
+            "fact": "F4",
+            "law": "L1",
+            "relation_summary": "Defendants sought dismissal and/or transfer of the matter to California under 28 U.S.C.S. \u00a7 1404(a)",
+            "confidence": 80
+        },
+        {
+            "fact": "F5",
+            "law": "L5",
+            "relation_summary": "The court found that California's venue affidavit requirement in Cal. Civ. Code \u00a7 1780(d) was a procedural rule",
+            "confidence": 80
+        },
+        {
+            "fact": "F6",
+            "law": "L4",
+            "relation_summary": "The mandatory forum selection clause in the Defendants' terms of service applied and was not unfair, unconscionable, or unreasonable under California law",
+            "confidence": 80
+        },
+        {
+            "fact": "F8",
+            "law": "L4",
+            "relation_summary": "Plaintiffs failed to file a 'venue affidavit' concurrently with the Complaint, as required by the California Consumer Legal Remedies Act (CLRA)",
+            "confidence": 80
+        },
+        {
+            "fact": "F9",
+            "law": "L3",
+            "relation_summary": "The court considered whether the state rule was substantive or procedural, and determined that it was procedural under the Erie doctrine",
+            "confidence": 70
+        },
+        {
+            "fact": "F10",
+            "law": "L4",
+            "relation_summary": "The court analyzed whether the mandatory forum selection clause was enforceable, and found that it was not unfair or unreasonable under California law",
+            "confidence": 80
+        },
+        {
+            "fact": "F11",
+            "law": "L4",
+            "relation_summary": "The court considered whether the terms of the contract were unconscionable, and found that they were not",
+            "confidence": 80
+        },
+        {
+            "fact": "F12",
+            "law": "L4",
+            "relation_summary": "The court ultimately enforced the mandatory forum selection clause and transferred the action to California",
+            "confidence": 80
+        },
+        {
+            "fact": "F11",
+            "law": "L2",
+            "relation_summary": "The court found that California's venue affidavit requirement in Cal. Civ. Code \u00a7 1780(d) was a procedural rule",
+            "confidence": 30
+        }
+    ]
+}

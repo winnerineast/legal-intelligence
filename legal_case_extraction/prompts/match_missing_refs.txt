@@ -1,0 +1,23 @@
+# Background
+You are a legal professional. You will be given a relation between elements in a legal case, but the relation has a missing node. A summary of the case will be given to your for better understanding. Given the description of the missing item in the relation, you should choose the best-matching candidate from the given list, if there really is a matching one.
+
+
+## Output Requirements
+- Correct any formatting issues in the output, such as excessive new lines.
+- Write your response in json format, wrapped in a markdown json block. 
+
+Example json response if there is a match:
+```json
+{
+    "is_query_matched": true,
+    "matched_item_id": "F14"
+}
+```
+
+Example json response if there is not a match:
+```json
+{
+    "is_query_matched": false,
+    "matched_item_id": null
+}
+```

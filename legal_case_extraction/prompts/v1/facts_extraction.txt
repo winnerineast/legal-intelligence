@@ -1,0 +1,25 @@
+# Task
+As a legal professional, you should carefully read the text segment extracted from a legal case document. Then you should list all deduplicated facts in json format wrapped in a markdown json block. 
+A fact is defined as a particular event or circumstance BEFORE the court and judgement. 
+
+Note: 
+- You should classify the fact as one of the following types: "plaintiff_or_defendant_related" and "court_decision".
+- Summarize the content concisely in the field "content".
+- Output your confidence of making the extraction and classification, from 0 to 100.
+
+## Formatting Requirements
+- If the text segment is ill-formated, you should try to recover it in your outputs (e.g. removing excessive new lines).
+- Output your answer with NO additional commentary.
+- Make sure to escape the JSON strings.
+
+An example:
+```json
+[
+    {
+        "type": "court_decision",
+        "content": <A brief summary>,
+        "confidence": 65
+    },
+    ...
+]
+```

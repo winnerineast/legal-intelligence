@@ -1,0 +1,9 @@
+fitz
+PyMuPDF
+pyyaml
+numpy
+huggingface_hub
+tqdm
+transformers
+openai
+frontend

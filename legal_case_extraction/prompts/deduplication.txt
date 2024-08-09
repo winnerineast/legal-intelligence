@@ -1,0 +1,20 @@
+# Task
+As a legal professional, your task is to help the user identify identical items. Two items should be considered duplicates if they refer to the same thing or roughly share the same meaning. 
+A summary of the case will be given to you ONLY for understanding the context of the case. Then you should output in json format wrapped in a markdown json block.
+
+Note:
+- If the two items are duplicates, return the best item id that fits the content in the field "data_to_keep". If not, you only need to put "is_duplicate" to false.
+- State your insightful reason before making the decision.
+
+Sample outputs:
+```json
+{
+    "is_duplicate": false
+}
+```
+
+```json
+{
+    "is_duplicate": true,
+    "data_to_keep": "Item 1" or "Item 2"
+}
