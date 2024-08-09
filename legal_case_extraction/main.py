@@ -134,12 +134,16 @@ class LegalCaseAgent:
     def __init__(self, model_name="meta-llama/Meta-Llama-3-8B-Instruct", configs: dict = None):
         self.model_name = model_name
         self.llm_client = OpenAI(
-            api_key=configs['api-key'][0],
-            base_url="https://api.deepinfra.com/v1/openai",
+            api_key='ollama',
+            base_url="http://localhost:11434/v1",
+            #api_key=configs['api-key'][0],
+            #base_url="https://api.deepinfra.com/v1/openai",
         )
         self.embedding_model = OpenAI(
-            api_key=configs['api-key'][0],
-            base_url="https://api.deepinfra.com/v1/openai",
+            api_key='ollama',
+            base_url="http://localhost:11434/v1",
+            #api_key=configs['api-key'][0],
+            #base_url="https://api.deepinfra.com/v1/openai",
         )
         self.chunks = None
         login(token=configs['api-key'][1])
@@ -856,7 +860,7 @@ agent.save_for_visualization('visualization.json')
 print(agent.summary)
 
 openai = OpenAI(
-    api_key="aoJosgcl454OFvmHQ0XtZKopCAHKBm7S",
+    api_key=configs['api-key'][0],
     base_url="https://api.deepinfra.com/v1/openai",
 )
 
