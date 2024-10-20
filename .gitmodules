@@ -1,42 +1,9 @@
-[submodule "craw_management"]
-	path = craw_management
-	url = https://github.com/winnerineast/crawlab.git
-[submodule "vector"]
-	path = vector
-	url = https://github.com/winnerineast/rag-from-scratch.git
-[submodule "brain"]
-	path = brain
-	url = https://github.com/winnerineast/quivr.git
-[submodule "agents"]
-	path = agents
-	url = https://github.com/winnerineast/crewAI.git
-[submodule "brain2"]
-	path = brain2
-	url = https://github.com/winnerineast/reor.git
-[submodule "search_craw"]
-	path = search_craw
-	url = https://github.com/winnerineast/llm-answer-engine.git
-[submodule "spRAG"]
-	path = spRAG
-	url = https://github.com/winnerineast/spRAG.git
-[submodule "workflow"]
-	path = workflow
-	url = https://github.com/winnerineast/dify.git
-[submodule "markdowner"]
-	path = markdowner
-	url = https://github.com/winnerineast/markdowner.git
-[submodule "MaxKB"]
-	path = MaxKB
-	url = https://github.com/winnerineast/MaxKB.git
-[submodule "lazygpt"]
-	path = lazygpt
-	url = https://github.com/winnerineast/lazygpt.git
-[submodule "cube-studio"]
-	path = cube-studio
-	url = https://github.com/winnerineast/cube-studio.git
-[submodule "gptpdf"]
-	path = gptpdf
-	url = https://github.com/winnerineast/gptpdf.git
-[submodule "AI-samples"]
-	path = AI-samples
-	url = https://github.com/winnerineast/AI-samples
+[submodule "openshot-qt"]
+	path = openshot-qt
+	url = https://github.com/winnerineast/openshot-qt.git
+[submodule "libopenshot"]
+	path = libopenshot
+	url = https://github.com/winnerineast/libopenshot.git
+[submodule "libopenshot-audio"]
+	path = libopenshot-audio
+	url = https://github.com/winnerineast/libopenshot-audio.git
