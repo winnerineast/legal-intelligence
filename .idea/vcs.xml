@@ -2,31 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/AI-samples" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MaxKB" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/agents" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/brain" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/brain2" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management/crawlab-core" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management/crawlab-db" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management/crawlab-docs" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management/crawlab-fs" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management/crawlab-grpc" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management/crawlab-vcs" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management/deployment_examples" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management/go-trace" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management/goseaweedfs" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management/public-plugins" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management/screenshots" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/craw_management/template-parser" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/cube-studio" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/gptpdf" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lazygpt" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/markdowner" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/search_craw" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/spRAG" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/vector" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/workflow" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libopenshot" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libopenshot-audio" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/openshot-qt" vcs="Git" />
   </component>
 </project>
