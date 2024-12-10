@@ -2,7 +2,10 @@
 This is an AI-driven content creation application.
 
 ## How to run
-coming soon...
+- create virtual python 3.12 environment (li)
+- pip install -r requirements.txt
+- playwright install
+- playwright install-deps
 
 ## Design Principle
 1. user input description, reference video, audio or image.
