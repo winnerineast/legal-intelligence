@@ -11,5 +11,8 @@ coming soon...
 4. monitor end-user viewing behavior.
 
 ## Work Daily
-### 2024-11-04 [yyyy-mm-dd]
+### 2024-12-10
+clean up code base and start from capture web page contents.
+
+### 2024-11-04
 Used openshot as baseline, fork it and read source code including associated libraries （libopenshot, libopenshot-audio and ffmpeg) to understand how it works.
