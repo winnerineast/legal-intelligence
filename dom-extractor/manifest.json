@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "DOM Extractor",
+    "version": "1.0",
+    "description": "Extracts and displays the DOM structure of a web page.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "sidePanel"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "side_panel": {
+      "default_path": "sidebar.html"
+    },
+    "action": {}
+  }

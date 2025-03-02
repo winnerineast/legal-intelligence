@@ -1,0 +1,21 @@
+.node {
+    margin-left: 10px;
+    border-left: 1px solid #ccc;
+    padding-left: 5px;
+  }
+  
+  .node-type {
+    font-weight: bold;
+    color: blue;
+  }
+  
+  .node-text {
+    color: green;
+  }
+  .node-attributes {
+      font-style: italic;
+      color: #666666;
+  }
+  .node-children{
+  
+  }
