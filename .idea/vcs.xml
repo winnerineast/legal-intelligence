@@ -2,8 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/libopenshot" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/libopenshot-audio" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/openshot-qt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/avatar/LatentSync" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tts/bark" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tts/elevenlabs-python" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tts/vitsGPT" vcs="Git" />
   </component>
 </project>
